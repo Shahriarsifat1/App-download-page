@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Download Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .app-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      
+      border-radius: 10px;
+    }
+
+    /* Header Section */
+    .app-header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    .app-logo {
+      width:65px;
+      height: 65px;
+      margin-right: 20px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .app-info {
+      flex: 1;
+    }
+
+    .app-name {
+      margin: 0;
+      font-size:16px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .developer-name {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* App Details Section */
+    .app-details {
+      margin: 20px 0;
+    }
+
+    .app-details h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    .app-details p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Screenshots Section */
+    .app-screenshots {
+      margin: 20px 0;
+    }
+
+    .app-screenshots h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .screenshot-gallery {
+      display: flex;
+      gap: 10px;
+    }
+
+    .screenshot-gallery img {
+      width: 100px;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* Download Section */
+    .download-section {
+      text-align: center;
+     
+    }
+
+
+
+
+    .download-btn {
+      background-color: #4caf50;
+      color: white;
+      font-size:14px;
+      padding:8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      
+      text-decoration:none;
+    }
+
+    .download-btn:hover {
+      background-color: #45a049;
+    }
+
+    .alert {
+      display: none;
+      margin-top: 15px;
+      font-size: 16px;
+      color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Section -->
+    <header class="app-header">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-0c8QP2Za_wCxfkJ4Ffg1SOCo95gp_-7pMA&s" alt="App Logo" class="app-logo">
+      <div class="app-info">
+        <h1 class="app-name">Movieplex BD</h1>
+        <p class="developer-name">By Movieplex team</p>
+      </div>
+      <!-- Download Section -->
+      <section class="download-section">
+      <a href="https://download1531.mediafire.com/m6f0si1oqm6gPczElX-6Z2umWNiEV5ndB7D_Y0X8GS2oc6bwW8Ar-oZfbfkeU3OTvKarHaSZZ-vBf1DY0xjuUJL8yVWM6B2wiovUkcm2zt3YO53g_RHojAm5H0FvEW2wI5XSuve4Tj1-4AbQjJMBjE8GGfFPTNIES8H7usWQPKa-ST8/hc0vag6t3x7flkw/movieplexbd.apk" class="download-btn" target="_blank" onclick="showAlert()">
+      <i class="fas fa-download"></i> Download App
+      </a>
+      </section>
+      
+    </header>
+    <p class="alert">Your download has started!</p>
+    
+    
+    <!-- App Details Section -->
+    <section class="app-details">
+      <h2>About the App</h2>
+      <p>
+        Movie Plex অ্যাপটি একটি নিরাপদ এবং বিশ্বস্ত প্ল্যাটফর্ম, যেখানে আপনি সহজেই মুভি ডাউনলোড করে উপভোগ করতে পারবেন। এখানে সব ধরনের নতুন মুভি বাংলা ডাবিং ও হিন্দি ভার্সনে পাওয়া যাবে। আপনি যেকোনো সময় আপনার পছন্দের মুভি ডাউনলোড করে, পরিবারের সঙ্গে উপভোগ করতে পারবেন। অ্যাপটি ডাউনলোড করে ইনস্টল করুন এবং আধুনিক ডিজাইনে নির্মিত মুভি প্লেক্সে সেরা মুভি অভিজ্ঞতা উপভোগ করুন। </p>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="app-screenshots">
+      <h2>App Screenshots</h2>
+      <div class="screenshot-gallery">
+        <img src="https://i.ibb.co.com/Fwgt8Xr/Screenshot-20250115-234846-01.jpg" alt="Screenshot 1">
+        <img src="https://i.ibb.co.com/hMwGLWM/Screenshot-2025-01-15-23-49-43-381-edit-xyz-movieplexbd-app.jpg" alt="Screenshot 2">
+        <img src="https://i.ibb.co.com/Lg1SSZm/Screenshot-2025-01-15-23-51-27-521-edit-xyz-movieplexbd-app.jpg" alt="Screenshot 3">
+      </div>
+    </section>
+
+    
+  </div>
+
+  <script>
+    function showAlert() {
+      const alertMessage = document.querySelector('.alert');
+      alertMessage.style.display = 'block';
+      setTimeout(() => {
+        alertMessage.style.display = 'none';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
